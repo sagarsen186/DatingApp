@@ -21,11 +21,7 @@ ngOnInit():void{
 login(){
   this.accountService.login(this.model).subscribe({
     next:_=>
-      this.router.navigateByUrl('/members'),
-      error:error=>{
-        this.toastr.error(error.error),
-        console.log(error)
-      }
+      this.router.navigateByUrl('/members')
   });
 }
 logout(){
